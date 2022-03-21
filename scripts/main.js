@@ -123,6 +123,7 @@ async function getInputValue(){
   }
   else if(value.toLowerCase() === "about"){
     trueValue(value);
+    
     createText("<p class=\"path center\">Narendra Dewasi</p>")
     createText(`<p class="helperText center"> Self taught Coder -- Looking for internship/fullTime SDE roles`)
     createText(`<div class="center">--------------------------------</div>`)
@@ -189,7 +190,7 @@ function falseValue(value){
   app.appendChild(div);
 }
 
-function createText(text, classname){
+function createText(text){
   const p = document.createElement("p");
   
   p.innerHTML =
