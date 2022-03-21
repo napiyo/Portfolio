@@ -23,8 +23,8 @@ app.addEventListener("click", function(event){
 async function open_terminal(){
   createText("Welcome to my portfolio");
   await delay(700);
-  createText("Starting the server...");
-  await delay(500);
+  createText("<div class=\"animated\" >Starting the server...</div>");
+  await delay(8000);
   createText("<p class=\"helperText\">- You can run \"ls\" command to show all available commands</p>");
   await delay(300)
   createText("<p class=\"helperText\">- or to know how to run this terminal type \"help\"</p>");

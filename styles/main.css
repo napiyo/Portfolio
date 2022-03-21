@@ -253,6 +253,13 @@ li {
     text-align: center;
 }
 
+.animated {
+    white-space: nowrap;
+    /* margin: 0 auto; */
+    overflow: hidden;
+    animation: typing 2s steps(40, end) 4 alternate;
+}
+
 
 /* The typing effect */
 
@@ -261,6 +268,6 @@ li {
         width: 0;
     }
     to {
-        width: 100%;
+        width: 50%;
     }
 }
