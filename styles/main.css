@@ -44,7 +44,7 @@ a:hover {
 body {
     background-color: #393A59;
     height: 100vh;
-    font-family: 'Fira Code', monospace;
+    font-family: 'space mono', 'Fira Code', monospace;
     display: flex;
     align-items: center;
     justify-content: center;
