@@ -263,7 +263,7 @@ li {
     white-space: nowrap;
     /* margin: 0 auto; */
     overflow: hidden;
-    animation: typing 2s steps(40, end) 4 alternate;
+    animation: typing 2s steps(40, end) 2 alternate;
 }
 
 .animatedInfinite {
@@ -271,6 +271,27 @@ li {
     /* margin: 0 auto; */
     overflow: hidden;
     animation: typing 2.5s steps(40, end) infinite alternate;
+}
+
+table {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: rgba(255, 255, 255, 0.288) 1px solid;
+    padding: 5px 20px;
+}
+
+.resumeTable {
+    background-color: rgba(37, 192, 37, 0.315);
+}
+
+tr:nth-child(2n+1) {
+    background-color: rgba(80, 79, 79, 0.397);
 }
 
 

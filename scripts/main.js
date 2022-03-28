@@ -70,7 +70,7 @@ async function open_terminal() {
     createText("Welcome to my portfolio");
     await delay(700);
     createText("<div class=\"animated\" >Starting the server...</div>");
-    // await delay(8000);
+    await delay(4000);
     createText("<p class=\"helperText\">- You can run \"ls\" command to show all available commands</p>");
     await delay(300)
     createText("<p class=\"helperText\">- or to know how to run this terminal type \"help\"</p>");
@@ -116,14 +116,60 @@ async function getInputValue() {
     if (value.toLocaleLowerCase() == "ls") {
         trueValue(value);
 
-        createCode("projects", "show My all projects");
-        createCode("about", "Who am I and what do I do.");
-        createCode("social", "All my social networks.");
-        createCode("ls", "show all available commands");
-        createCode("help", "to know how to use this terminal");
-        createCode("clear", "Clean the terminal.");
-        createCode("resume", "download my resume");
-        createCode("send msg", "send me feedback/message anonymously");
+        // createCode("projects", "show My all projects");
+        // createCode("about", "Who am I and what do I do.");
+        // createCode("social", "All my social networks.");
+        // createCode("ls", "show all available commands");
+        // createCode("help", "to know how to use this terminal");
+        // createCode("clear", "Clean the terminal.");
+        // createCode("resume", "download my resume");
+        // createCode("send msg", "send me feedback/message anonymously");
+        const table = document.createElement('div');
+        table.innerHTML = `
+        <table>
+  <tr>
+    <th>Command</th>
+    <th>Action</th>
+   
+  </tr>
+  <tr>
+    <td>ls</td>
+    <td>show all available commands</td>
+  
+  </tr> 
+  <tr>
+    <td>projects</td>
+    <td>show My all projects</td>
+  
+  </tr>
+  <tr>
+    <td>about</td>
+    <td>Who am I and what do I do</td>
+  </tr>
+   <tr>
+    <td>social</td>
+    <td>All my social networks.</td>
+  </tr>
+   <tr>
+    <td>send msg</td>
+    <td>send me feedback/message anonymously</td>
+  </tr>
+   <tr>
+    <td class="resumeTable">resume</td>
+    <td>download my resume</td>
+  </tr>
+   <tr>
+    <td>clear</td>
+    <td>Clean the terminal.</td>
+  </tr>
+   <tr>
+    <td>help</td>
+    <td>to know how to use this terminal</td>
+  </tr>
+  
+</table>`
+        app.appendChild(table)
+
 
     } else if (value.toLowerCase().trim() == "send msg") {
         trueValue(value);
