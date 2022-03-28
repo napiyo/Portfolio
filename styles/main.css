@@ -208,6 +208,12 @@ input:focus {
     padding: 8px 0;
 }
 
+#msgDiv {
+    display: flex;
+    padding: 8px 0;
+    align-items: center;
+}
+
 .type2 {
     display: flex;
     align-items: center;
@@ -258,6 +264,13 @@ li {
     /* margin: 0 auto; */
     overflow: hidden;
     animation: typing 2s steps(40, end) 4 alternate;
+}
+
+.animatedInfinite {
+    white-space: nowrap;
+    /* margin: 0 auto; */
+    overflow: hidden;
+    animation: typing 2.5s steps(40, end) infinite alternate;
 }
 
 
