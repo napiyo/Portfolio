@@ -317,17 +317,20 @@ async function sendMessage(message, sender) {
         sender
     }
     await fetch('https://profoliobackend.herokuapp.com/api/msg/sendmessage', {
-        method: 'POST',
+            method: 'POST',
 
-        headers: {
+            headers: {
 
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(_data),
-    }).then((res) => {
-        console.log("thanks for feedback");
-    }).catch((e) => {
-        console.log(e);
-    })
+                'Content-Type': 'application/json'
+            },
+            body: (JSON.stringify(_data)),
+        }).then((res) => {
+            res.json();
+        }).then((res) => {
+            console.log(res);
+        })
+        .catch((e) => {
+            console.log(e);
+        })
 }
 open_terminal();
