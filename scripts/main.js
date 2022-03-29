@@ -125,6 +125,7 @@ async function getInputValue() {
         // createCode("resume", "download my resume");
         // createCode("send msg", "send me feedback/message anonymously");
         const table = document.createElement('div');
+        table.setAttribute('class', 'table')
         table.innerHTML = `
         <table>
   <tr>
@@ -256,6 +257,8 @@ async function getInputValue() {
     } else if (value.toLowerCase().trim() === "clear") {
         document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
         document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
+        const w = document.querySelectorAll('.table').forEach(e => e.parentNode.removeChild(e));
+        // app.removeChild(w)
     } else {
         falseValue(value);
         createText(`<p class="error">command not found: ${value} </P>`)
