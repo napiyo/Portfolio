@@ -317,16 +317,12 @@ function createCode(code, text) {
 async function sendMessage(message, sender) {
     let _data = {
         message,
-        sender
+        'sender':sender.ip
     }
-    await fetch('https://profoliobackend.herokuapp.com/api/msg/sendmessage', {
+    await fetch('/api/msg/sendmessage', {
             method: 'POST',
-            mode: 'cors',
-
             headers: {
-
                 'Content-Type': 'application/json',
-                'Origin': 'https://napiyo.github.io'
             },
             body: (JSON.stringify(_data)),
         }).then((res) => {
