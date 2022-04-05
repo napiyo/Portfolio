@@ -344,7 +344,15 @@ async function closeterminal(){
     const footer = document.querySelector('.footer');
 
     terminal.style.position = 'absolute';
-    terminal.style.bottom='0px'
+    if(window.innerWidth <= 600){
+        terminal.style.top='10px'
+        console.log(window.innerWidth);
+        
+    }
+    else{
+
+        terminal.style.bottom='0px'
+    }
     // terminal.style.left='0'
     app.style.display='none';
     terminal.style.width='250px';
@@ -363,7 +371,7 @@ async function maximizeTerminal(){
     await delay(1000);
     gui.style.display='none';
     // await delay(200)
-    const terminal = document.querySelector('.terminal');
+    // const terminal = document.querySelector('.terminal');
     const app = document.querySelector('#app');
     const footer = document.querySelector('.footer');
     terminal.style.bottom='0px'

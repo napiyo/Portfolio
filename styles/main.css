@@ -143,6 +143,7 @@ div.title {
     height: 100%;
     padding: 8px;
     overflow: auto;
+    border-radius: 0 0 6px 6px;
 }
 
 p {
@@ -699,4 +700,80 @@ tr:nth-child(2n+1) {
     border-width: 5px;
     border-style: solid;
     border-color: #6a76d26d transparent transparent transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    .terminal {
+        /* width: 90vw; */
+        max-width: 95vw;
+        max-height: 90vh;
+        /* position: relative; */
+        height: 100vh;
+        /* padding: 0; */
+        margin: 0;
+    }
+    .footer {
+        display: none;
+        /* opacity: 0; */
+        /* background-color: red; */
+    }
+    .helperText {
+        font-size: 12px;
+    }
+    .toolpin {
+        top: 50px;
+        left: 0;
+        background-color: #66C2CD;
+    }
+    .toolpin::after {
+        top: -10px;
+        left: 10%;
+        border-color: transparent transparent #66C2CD transparent;
+    }
+    body {
+        background: #393A59;
+        overflow-y: auto;
+    }
+    .mainBody {
+        height: auto;
+    }
+    .GUI {
+        height: 100%;
+        margin-top: 50px;
+        /* background-color: #282A35; */
+    }
+    .GuiTop {
+        flex-wrap: wrap;
+        height: fit-content;
+        row-gap: 10px;
+    }
+    .verticalDivider {
+        display: none;
+    }
+    .educationHelper {
+        font-size: 12px;
+    }
+    .GuiHeading {
+        text-align: center;
+    }
+    .summary {
+        width: 100%;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    .projects {
+        width: 110%;
+        height: 400px;
+        max-height: 100%;
+        margin-left: -5%;
+        margin-bottom: 50px;
+    }
+    .projectHeading {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        text-align: center;
+    }
+    .projectHeading~div {
+        text-align: center;
+    }
 }
