@@ -65,7 +65,7 @@ body {
     max-width: 800px;
     height: 500px;
     max-height: 90vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 6px;
     border: 1px solid rgb(92, 91, 91);
     margin: 20px;
@@ -656,4 +656,47 @@ tr:nth-child(2n+1) {
     100% {
         transform: scale(1);
     }
+}
+
+.toolpin {
+    position: absolute;
+    width: 150px;
+    height: 35px;
+    background-color: #6a76d26d;
+    top: -31px;
+    left: -150%;
+    z-index: 3;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: all 0.25s;
+    animation: showtoolpin 10s;
+}
+
+@keyframes showtoolpin {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+}
+
+.power-switch:hover .toolpin {
+    opacity: 1;
+}
+
+.toolpin::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #6a76d26d transparent transparent transparent;
 }

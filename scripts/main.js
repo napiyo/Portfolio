@@ -381,11 +381,18 @@ async function maximizeTerminal(){
 let terminalMode = document.getElementById('terminalMode');
 terminalMode.addEventListener('click',()=>{
    if(terminalMode.checked){
-        maximizeTerminal();
-   }
-   else{
+       
+       const soundopen = document.getElementById('winopensound');
+       maximizeTerminal();
+       soundopen.play()
+    }
+    else{
+       const shutdownsound = document.getElementById('shutDownSound');
+
        closeterminal()
-   }
+       shutdownsound.play();
+
+    }
 
 })
 
