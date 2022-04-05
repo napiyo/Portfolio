@@ -1,42 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<div lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./logo_narendra.png" />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="./logo_narendra.png" />
 
-    <link href="styles/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>Napiyo-portfolio</title>
-</head>
+        <link href="styles/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">
+        <title>Napiyo-portfolio</title>
+    </head>
 
-<body>
-    <div class="container">
-        <div class="menu">
-            <div class="buttons-flex">
-                <div class="button red"></div>
-                <div class="button yellow"></div>
-                <div class="button green"></div>
+    <div>
+        <div class="mainBody">
+
+
+            <div class="terminal">
+                <div class="menu">
+                    <!-- <div class="buttons-flex"> -->
+                    <!-- <div class="button red" id="closeTerminalBtn"></div>
+                        <div class="button yellow"></div>
+                        <div class="button green"></div> -->
+                    <!-- switch terminal - gui mode -->
+                    <div class="power-switch">
+                        <input type="checkbox" id="terminalMode" checked />
+                        <div class="button">
+                            <svg class="power-off">
+                                <use xlink:href="#line" class="line" />
+                                <use xlink:href="#circle" class="circle" />
+                              </svg>
+                            <svg class="power-on">
+                                <use xlink:href="#line" class="line" />
+                                <use xlink:href="#circle" class="circle" />
+                              </svg>
+                        </div>
+                    </div>
+
+                    <!-- SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="line">
+                              <line x1="75" y1="34" x2="75" y2="58"/>
+                            </symbol>
+                            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="circle">
+                              <circle cx="75" cy="80" r="35"/>
+                            </symbol>
+                          </svg>
+
+
+                    <!-- </div> -->
+                    <div class="title">
+                        <a href="https://github.com/napiyo" target="_blank">
+                            <h1><i class='fab fa-github'></i> github.com/napiyo</h1>
+                        </a>
+                    </div>
+                </div>
+                <div id="app">
+                </div>
+
             </div>
-            <div class="title">
-                <a href="https://github.com/napiyo" target="_blank">
-                    <h1><i class='fab fa-github'></i> github.com/napiyo</h1>
-                </a>
+            <div class="footer">
+
+                help-"show how to run this terminal" || ls-"show all commands" || resume - "view my resume" || Total unique visitor: <img src="https://hitwebcounter.com/counter/counter.php?page=7963533&style=0006&nbdigits=5&type=ip&initCount=0" title="Free Counter"
+                    Alt="web counter" border="0" />
+            </div>
+
+            <div class="GUI">
+                <div class="GuiTop">
+                    <div class="profile">
+                        <img src="./logo_narendra.png" alt="narendra" class="GUI_profile_picture">
+                        <h2>Narendra Dewasi</h2>
+                    </div>
+                    <div class="verticalDivider"></div>
+                    <div class="EducationInfo">
+                        <h2 class="GuiHeading">Education</h2>
+                        <li> Ramaiah Institute of technology,Bengaluru - 2022</li>
+                        <div class="educationHelper">civil Engineering (BE)| CGPA: 8<sup>*</sup> (6 sem)</div>
+                        <li> Shiv jyoti sr sec school - Kota</li>
+                        <div class="educationHelper">12th (PCM)| BSER | 89.4%</div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="summary">
+                    Hi there, <br> &emsp; I'm narendra dewasi. A final year engineering student. who loves to code. if you're thinking that I'm doing my Bachelor of Engineering in civil Engineering and doing code. let me clear myself I'm full time coder.
+                    And will do code only.
+                </div>
+                <div class="divider"></div>
+                <h2 class="GuiHeading">Projects</h2>
+
+                <div class="projects">
+                    <div class="projectHeading">
+                        <div class="projectName"><i class="fas fa-folder-open"></i> Bookias | MERN stack | E-commerce</div>
+                        <div>
+                            <button class="projectActionBtn">Visit now</button>
+                            <button class="projectActionBtn">GitHub</button>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <li>E-commerce site - with complete functionality
+                    </li>
+                    <li>
+                        payment, admin panel,review, profile, filters, search, role based routes, etc . all functionality of e-commerce site
+                    </li>
+                    <li>
+                        Node.js , express, Mongodb, React, Redux
+                    </li>
+                    <div class="projectHeading">
+                        <div class="projectName"> <i class="fas fa-folder-open"></i> PetMe | React Native , Firebase , Material Design </div>
+                        <div>
+                            <!-- <button class="projectActionBtn">Visit now</button> -->
+                            <button class="projectActionBtn">GitHub</button>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <li>cross-platform mobile for pet adoption </li>
+                    <li> people can post request to adopt their pets or make a request to adopt pet. listed on home page</li>
+                    <li> history/details of adopted pet can be seen in history tab</li>
+
+                    <div class="projectHeading">
+                        <div class="projectName"> <i class="fas fa-folder-open"></i> Roommates | React Native , Firebase , Material Design </div>
+                        <div>
+                            <!-- <button class="projectActionBtn">Visit now</button> -->
+                            <button class="projectActionBtn">GitHub</button>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <li> mobile app to create task and automatic scheduler by time-intervals or turn wise
+                    </li>
+                    <li>
+
+                        task can be divide into individual or group task, and tells which task is pending and whose turn is to do task
+                    </li>
+                    <li> Roommates can create new Room or join room with unique id of room
+                    </li>
+                </div>
+                <div class="socialLinks">
+                    <div><a href='https://github.com/napiyo' target='_blank'><i class='fab fa-github white'></i> napiyo</a></div>
+                    <div><a href='https://www.linkedin.com/in/narendra_dewasi/' target='_blank'><i class='fab fa-linkedin-in white'></i> narendra_dewasi</a></div>
+                    <div><a href='https://www.instagram.com/narendra_dewasi/' target='_blank'><i class='fab fa-instagram white'></i>narendra_dewasi</a></div>
+                    <div><a href='mailto:radioactivenarendra@gmail.com' target='_blank'><i class='fa fa-envelope'></i> radioactivenarendra@gmail.com</a></div>
+                    <div><a href='tel:+917976224104' target='_blank'><i class='fa fa-phone'></i> +91 7976224104</a></div>
+                    <div><a href='https://www.codechef.com/users/napiyo' target='_blank'><i class='fa fa-code'></i> Codechef - (3 stars) <i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></a></div>
+                    <div><a href='https://leetcode.com/napiyo/' target='_blank'><i class='fa fa-code'></i> leetCode - 150+ problems</a></div>
+                    <div><a href='https://auth.geeksforgeeks.org/user/radioactivenarendra/practice/' target='_blank'><i class='fa fa-code'></i> Geeks For Geeks - 110+ problems</a></div>
+
+                </div>
+                <div class="resumeGui">
+                    <a href="./resume.pdf" download> <i class="fa fa-file" aria-hidden="true"></i> Resume</a>
+                </div>
             </div>
         </div>
-        <div id="app">
-        </div>
+        <script src="scripts/main.js"></script>
 
-    </div>
-    <div class="footer">
+        </body>
 
-        help-"show how to run this terminal" || ls-"show all commands" || resume - "view my resume" || Total unique visitor: <img src="https://hitwebcounter.com/counter/counter.php?page=7963533&style=0006&nbdigits=5&type=ip&initCount=0" title="Free Counter"
-            Alt="web counter" border="0" />
-    </div>
-    <script src="scripts/main.js"></script>
-
-</body>
-
-</html>
+        </html>

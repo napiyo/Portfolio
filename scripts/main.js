@@ -59,7 +59,8 @@ app.addEventListener("keypress", async function(event) {
 });
 
 app.addEventListener("click", function(event) {
-    const input = document.querySelector("input");
+    const input = document.querySelector("#commandinput");
+   
     if (input) {
         input.focus();
     }
@@ -98,6 +99,7 @@ async function new_line() {
     const i = document.createElement("i");
     i.setAttribute("class", "fas fa-angle-right icone")
     const input = document.createElement("input");
+    input.setAttribute('id','commandinput');
     div.appendChild(i);
     div.appendChild(input);
     app.appendChild(div);
@@ -112,7 +114,7 @@ function removeInput() {
 
 async function getInputValue() {
 
-    const value = document.querySelector("input").value;
+    const value = document.querySelector("#commandinput").value;
     if (value.toLocaleLowerCase() == "ls") {
         trueValue(value);
 
@@ -334,4 +336,60 @@ async function sendMessage(message, sender) {
             console.log(e);
         })
 }
+const gui = document.querySelector('.GUI');
+const terminal = document.querySelector('.terminal');
+async function closeterminal(){
+
+    const app = document.querySelector('#app');
+    const footer = document.querySelector('.footer');
+
+    terminal.style.position = 'absolute';
+    terminal.style.bottom='0px'
+    // terminal.style.left='0'
+    app.style.display='none';
+    terminal.style.width='250px';
+    terminal.style.height='37px';
+    footer.style.left='-100vw';
+    gui.style.display='block';
+    await delay(1000)
+    gui.style.opacity=1;
+    // open GUI mode
+   
+
+  
+}
+async function maximizeTerminal(){
+    gui.style.opacity=0;
+    await delay(1000);
+    gui.style.display='none';
+    // await delay(200)
+    const terminal = document.querySelector('.terminal');
+    const app = document.querySelector('#app');
+    const footer = document.querySelector('.footer');
+    terminal.style.bottom='0px'
+    // terminal.style.rigth='0'
+    terminal.style.width='100%';
+
+    terminal.style.height='500px';
+    // await delay(500)
+    app.style.display='block';
+    footer.style.left='0'
+    terminal.style.position = 'relative';
+   
+}
+
+let terminalMode = document.getElementById('terminalMode');
+terminalMode.addEventListener('click',()=>{
+   if(terminalMode.checked){
+        maximizeTerminal();
+   }
+   else{
+       closeterminal()
+   }
+
+})
+
+
+
+
 open_terminal();
