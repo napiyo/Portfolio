@@ -321,8 +321,10 @@ function createCode(code, text) {
     app.appendChild(p);
 }
 async function showmsgs(){
+
     await fetch('/api/msg/showmsgs').then(res=>res.json()).then((jsondata)=>{
-        for(i in jsondata.msgs){
+        for(let j in jsondata.msgs){
+            let i =jsondata.msgs[j] 
             createCode(i.sender+" - "+i.sentOn,i.message)
         }
     }).catch((e)=>{
