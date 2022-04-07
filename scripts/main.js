@@ -46,7 +46,7 @@ app.addEventListener("keypress", async function(event) {
             new_line();
             step = 0;
         } else if (step == 0) {
-            getInputValue();
+           await getInputValue();
             removeInput();
             await delay(150);
             if (step == 0) {
@@ -264,7 +264,7 @@ async function getInputValue() {
     } 
     else if(value.toLowerCase().trim()===`admin show msgs`){
 
-        showmsgs()
+        await showmsgs()
     }
     else {
         falseValue(value);
