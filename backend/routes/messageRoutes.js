@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.route('/sendmessage').post(sendMessage);
-router.route('/showmsgs').post(showmsgs);
+router.route('/showmsgs').get(showmsgs);
 
 
 
