@@ -14,3 +14,14 @@ exports.sendMessage = async(req,res,next)=>{
         })
 
 }
+
+exports.showmsgs = async(req,res,next)=>{
+ 
+        const msgs = await messageSchema.find();
+      
+        res.status(201).json({
+            sucess:true,
+            msgs,
+        })
+
+}

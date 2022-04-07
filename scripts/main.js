@@ -261,7 +261,11 @@ async function getInputValue() {
         document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
         const w = document.querySelectorAll('.table').forEach(e => e.parentNode.removeChild(e));
         // app.removeChild(w)
-    } else {
+    } 
+    else if(value.toLowerCase().trim()==='admin show msgs'){
+        showmsgs()
+    }
+    else {
         falseValue(value);
         createText(`<p class="error">command not found: ${value} </P>`)
         createText(`<p class="helperText">type "ls" to show all available commands </p>`)
@@ -315,7 +319,19 @@ function createCode(code, text) {
         `${code} <br/><span class='text'> ${text} </span>`;
     app.appendChild(p);
 }
+async function showmsgs(){
+    await fetch('/api/msg/showmsgs').then((res)=>{
+        res.json()
+    }).then((res)=>{
+        // console.log(res.data);
+        for(i in res.data){
+            createCode(i.sender+" - "+i.sentOn,i.message)
+        }
+    }).catch((e)=>{
 
+        console.log(e);
+    })
+}
 async function sendMessage(message, sender) {
     let _data = {
         message,
