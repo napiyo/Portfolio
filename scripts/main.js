@@ -262,7 +262,8 @@ async function getInputValue() {
         const w = document.querySelectorAll('.table').forEach(e => e.parentNode.removeChild(e));
         // app.removeChild(w)
     } 
-    else if(value.toLowerCase().trim()==='admin show msgs'){
+    else if(value.toLowerCase().trim()===`admin show msgs`){
+
         showmsgs()
     }
     else {
@@ -321,9 +322,7 @@ function createCode(code, text) {
 }
 async function showmsgs(){
     await fetch('/api/msg/showmsgs').then(res=>res.json()).then((jsondata)=>{
-        console.log(jsondata);
-        console.log(jsondata.data);
-        for(i in jsondata.data.msgs){
+        for(i in jsondata.msgs){
             createCode(i.sender+" - "+i.sentOn,i.message)
         }
     }).catch((e)=>{
