@@ -248,8 +248,8 @@ async function getInputValue() {
     } else if (value.toLowerCase().trim() === "social") {
         trueValue(value);
         createText("<a href='https://github.com/napiyo' target='_blank'><i class='fab fa-github white'></i> github.com/napiyo</a>")
-        createText("<a href='https://www.linkedin.com/in/narendra_dewasi/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/narendra_dewasi</a>")
-        createText("<a href='https://www.instagram.com/narendra-dewasi/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/narendra_dewasi</a>")
+        createText("<a href='https://www.linkedin.com/in/narendra-dewasi/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/narendra_dewasi</a>")
+        createText("<a href='https://www.instagram.com/narendra_dewasi/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/narendra-dewasi</a>")
         createText("<a href='mailto:radioactivenarendra@gmail.com' target='_blank'><i class='fa fa-envelope'></i> radioactivenarendra@gmail.com</a>")
         createText("<a href='tel:+917976224104' target='_blank'><i class='fa fa-phone'></i> +91 7976224104</a>")
         createText("<a href='https://www.codechef.com/users/napiyo' target='_blank'><i class='fa fa-code'></i> Codechef - (3 stars) <i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></a>")
